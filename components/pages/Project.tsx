@@ -1,4 +1,6 @@
-import React from 'react'
+import React from "react"
+import UnderLine from "../shared/UnderLine"
+import Image from 'next/image'
 
 type ProjectType = {
   name: string
@@ -15,36 +17,36 @@ export default function Project() {
       problem: "People forget to care for their plants regularly.",
       tech: ["React", "Tailwind", "Node.js","ExpressJs", "MongoDB"],
       link: ["https://plantcare.app"],
-      image: "/images/plantcare.png"
-    },
+      image: "/file.svg"
+    }, 
     {
       name: "🎒 Lost & Found Items Management",
       problem: "Lost items were piling up with no proper way to manage or return them.",
       tech: ["React", "Tailwind", "Node.js", "ExpressJs", "MongoDB"],
       link: ["https://plantcare.app"],
-      image: "/images/plantcare.png"
+      image: "/file.svg"
     },
     {
       name: "☕ Coffee Shop Management System",
       problem: "Manual order handling and inventory tracking led to delays and waste.",
       tech: ["React", "Tailwind", "Node.js","ExpressJs", "MongoDB"],
       link: ["https://plantcare.app"],
-      image: "/images/plantcare.png"
+      image: "/file.svg"
     },
     {
       name: "🥫 Foods Date Management System",
       problem: "People often forget expiry dates, leading to waste or health risks.",
       tech: ["React", "Tailwind", "Node.js", "ExpressJs", "MongoDB"],
       link: ["https://plantcare.app"],
-      image: "/images/plantcare.png"
+      image: "/file.svg"
     },
   ]
 
   return (
-    <div id='project'>
+    <div id="project">
       <div>
-        <h1 className='text-center text-2xl'>What I've Build? / Project</h1>
-        <hr className='mx-auto w-40 border-2 rounded-full border-green-400' />
+        <h2>What Ive Build? / Project</h2>
+        <UnderLine />
         <p>
           Every project I’ve built started with a real problem, a challenge someone faced, or a need that wasn’t being met.
           I don’t just code features. I design solutions that work in the real world—reliable, responsive, and ready to grow.
@@ -54,15 +56,15 @@ export default function Project() {
         <div className="mt-6">
           {projects.map((project, index) => (
             <div key={index} className="mb-6 p-4 border rounded shadow">
-              <h2 className="text-xl font-bold">{project.name}</h2>
+              <h3>{project.name}</h3>
               <p className="text-sm text-gray-600 mt-1">{project.problem}</p>
               <div className="mt-2">
-                <strong>Tech Used:</strong> {project.tech.join(', ')}
+                <strong>Tech Used:</strong> {project.tech.join(", ")}
               </div>
               <div className="mt-1">
                 <strong>Live:</strong> <a href={project.link[0]} className="text-blue-500 underline" target="_blank">{project.link[0]}</a>
               </div>
-              <img src={project.image} alt={project.name} className="mt-3 rounded-md" />
+              {/* <Image src={project.image} alt={project.name} className="mt-3 rounded-md" /> */}
             </div>
           ))}
         </div>

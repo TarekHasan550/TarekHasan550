@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -56,14 +56,14 @@ html {
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #00f050;
+  --primary: #22d3ee;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: #22D3EE;
+  --secondary: rgb(0, 240, 80);
   --secondary-foreground: oklch(0.205 0 0);
-  --gradient: linear-gradient(to right, #00f050 20%, #22D3EE 100%);
-  .gradient-bg {
-      @apply background-image: var(--gradient);
-    }
+  --gradient: linear-gradient(to right, var(--color-primary) 20%, var(--color-secondary) 100%);
+  .gradient > * {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary) 80%);
+    }; 
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -88,16 +88,17 @@ html {
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: #151515;
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
+  --primary: #00f050;
   --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
+  --secondary: #22d3ee;
   --secondary-foreground: oklch(0.985 0 0);
+  --gradient: linear-gradient(to left, #00f050 20%, #22d3ee 100%);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
@@ -128,5 +129,22 @@ html {
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1 {
+    @apply text-6xl font-bold my-5;
+  }
+
+  h2 {
+    @apply text-3xl text-center font-semibold my-2;
+  }
+
+  h3 {
+    @apply text-xl font-semibold my-2;
+  }
+
+  p {
+    @apply text-lg my-3 leading-8 tracking-wide;
+    word-spacing: 0.1rem;
   }
 }
