@@ -1,6 +1,5 @@
 import React from "react"
 import UnderLine from "../shared/UnderLine"
-import Image from 'next/image'
 
 type ProjectType = {
   name: string

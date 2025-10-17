@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import UnderLine from '../shared/UnderLine';
 import { TbDeviceImacCode } from 'react-icons/tb';
 import { PiCompassToolBold } from 'react-icons/pi';
@@ -43,7 +42,7 @@ export default function MyWorkDimension() {
   return (
     <div id="work-dimension">
       <div>
-        <h2>What I've Do? / Work Dimension</h2>
+        <h2>What Ive Do? / Work Dimension</h2>
         <UnderLine />
         <p>
           Every dimension of my work adds to a bigger system, where logic meets
@@ -85,8 +84,10 @@ export default function MyWorkDimension() {
                     background: conic-gradient(
                       from 0deg,
                       rgba(255, 255, 255, 0.1) 0%,
-                      rgba(255, 255, 255, 0.1) 80%,
-                      var(--primary) 100%
+                      // var(--secondary) 25%,
+                      rgba(255, 255, 255, 0.1) 50%,
+                      var(--primary) 75%
+                      // rgba(255, 255, 255, 0.1) 100%
                     );
                     z-index: 0;
                     animation: rotate 3s linear infinite;
@@ -107,14 +108,17 @@ export default function MyWorkDimension() {
                   }
                 `}</style>
 
-                <div className="rotating-border-card flex flex-col gap-2" key={index}>
+                <div
+                  className="rotating-border-card flex flex-col gap-2 hover:scale-103 transition-transform duration-300"
+                  key={index}
+                >
                   <div className="text-primary text-4xl bg-primary/20 w-fit rounded-full p-3">
                     {dimension.icon}
                   </div>
                   <h2 className="text-xl text-left font-semibold">
                     {dimension.dimensionName}
                   </h2>
-                  <p className='m-0 text-base'>{dimension.description}</p>
+                  <p className="m-0 text-base">{dimension.description}</p>
                   <p className="text-sm text-right m-0 justify-self-end text-white/70 hover:text-white transition-colors mt-auto">
                     Click To Know More...
                   </p>

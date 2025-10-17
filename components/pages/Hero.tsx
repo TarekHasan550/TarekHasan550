@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FiFacebook, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiFacebook, FiGithub } from 'react-icons/fi';
 import { MdOutlineEmail, MdOutlineHandshake } from 'react-icons/md';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
@@ -27,7 +27,7 @@ export default function Hero() {
               <Link href={'#project'}> <SiCountingworkspro /> My Work Dimensions </Link>
             </Button>
             <Button asChild>
-              <Link href={'#connect'}><MdOutlineHandshake /> Let's Connect</Link>
+              <Link href={'#connect'}><MdOutlineHandshake /> Lets Connect</Link>
             </Button>
           </div>
           <div className="flex items-center gap-8 [&>*]:bg-primary/5 [&>*]:size-12 [&>*]:rounded-full [&>*]:p-3 [&>*]:cursor-pointer [&>*]:hover:bg-primary/70 [&>*]:hover:shadow- [0_0_10px_rgba(0,255,0,0.4)] [&>*]:overflow-visible [&>a>*]:size-full transition duration-300 ease-in-out">
