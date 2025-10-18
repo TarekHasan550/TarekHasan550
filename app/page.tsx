@@ -8,11 +8,13 @@ import Contact from '@/components/pages/Contact'
 import Footer from '@/components/shared/Footer'
 import Glow from '@/components/shared/Glow'
 import MyWorkDimension from '@/components/pages/MyWorkDimension'
+import ParticlesBackground from '@/components/animations/BgPartical'
 
 export default function Home() {
   return (
     <div>
       <Navbar />
+      <ParticlesBackground />
       <div className='mt-55 space-y-80'>
         <Glow top={-9} left={90} size={15} opacity={30}/>
         <Glow />

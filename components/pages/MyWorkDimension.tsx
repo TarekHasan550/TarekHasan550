@@ -51,9 +51,9 @@ export default function MyWorkDimension() {
           innovation, everything I create connects with specific purposes.
         </p>
         <div>
-          <div className="flex flex-warp gap-8 justify-center itmes-center my-6">
+          <div className="flex gap-8 justify-center items-stretch my-6">
             {Dimensions.map((dimension, index) => (
-              <>
+              <div key={index} className="w-full flex">
                 <style jsx>{`
                   @keyframes rotate {
                     0% {
@@ -70,6 +70,8 @@ export default function MyWorkDimension() {
                     border-radius: 2rem;
                     padding: 1.5rem;
                     cursor: pointer;
+                    width: 100%,
+                    height: 100%,
                     flex: 1;
                     overflow: hidden;
                   }
@@ -86,8 +88,7 @@ export default function MyWorkDimension() {
                       rgba(255, 255, 255, 0.1) 0%,
                       // var(--secondary) 25%,
                       rgba(255, 255, 255, 0.1) 50%,
-                      var(--primary) 75%
-                      // rgba(255, 255, 255, 0.1) 100%
+                      var(--primary) 75% // rgba(255, 255, 255, 0.1) 100%
                     );
                     z-index: 0;
                     animation: rotate 3s linear infinite;
@@ -107,11 +108,7 @@ export default function MyWorkDimension() {
                     z-index: 2;
                   }
                 `}</style>
-
-                <div
-                  className="rotating-border-card flex flex-col gap-2 hover:scale-103 transition-transform duration-300"
-                  key={index}
-                >
+                <div className="rotating-border-card flex flex-col gap-2 hover:scale-103 transition-transform duration-300">
                   <div className="text-primary text-4xl bg-primary/20 w-fit rounded-full p-3">
                     {dimension.icon}
                   </div>
@@ -123,7 +120,7 @@ export default function MyWorkDimension() {
                     Click To Know More...
                   </p>
                 </div>
-              </>
+              </div>
             ))}
           </div>
         </div>
