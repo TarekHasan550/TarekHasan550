@@ -1,6 +1,6 @@
-'use-client'
-import React from 'react'
-import UnderLine from '../shared/UnderLine'
+'use-client';
+import React from 'react';
+import UnderLine from '../../components/shared/UnderLine';
 
 export default function Skill() {
   type SkillType = {
@@ -64,21 +64,28 @@ export default function Skill() {
     },
   ];
   return (
-    <div id='skill'>
+    <div id="skill">
       <div>
         <h2>How I Build</h2>
         <UnderLine />
         <p>
-          I don’t just learn tools, I learn what they’re for. Behind every feature I build, there’s a decision, A reason, A trade‑off. That’s why I focus on mastering the fundamentals and understanding how things work under the hood.
-          I don’t get stuck in one stack... whenever a project calls  for something new, I dive in and adapt.But here are the tools I currently build with. Each one chosen for clarity, speed, and long-term maintainability:
+          I don’t just learn tools, I learn what they’re for. Behind every
+          feature I build, there’s a decision, A reason, A trade‑off. That’s why
+          I focus on mastering the fundamentals and understanding how things
+          work under the hood. I don’t get stuck in one stack... whenever a
+          project calls for something new, I dive in and adapt.But here are the
+          tools I currently build with. Each one chosen for clarity, speed, and
+          long-term maintainability:
         </p>
-          {/* Frontend Skills Section */}
+        {/* Frontend Skills Section */}
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-white">Frontend</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-white">
+              Frontend
+            </h3>
             <div className="h-px flex-1 bg-gradient-to-r from-primary to-transparent"></div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {frontendSkills.map((skill, index) => (
               <div
@@ -86,19 +93,21 @@ export default function Skill() {
                 className="group bg-primary-backgournd rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-primary hover:border-secondary transform hover:-translate-y-2"
                 style={{
                   animationDelay: `${index * 100}ms`,
-                  animation: 'fadeInUp 0.6s ease-out forwards'
+                  animation: 'fadeInUp 0.6s ease-out forwards',
                 }}
               >
                 {/* Skill Header */}
                 <div className="flex items-center gap-4 mb-4">
-                  <div 
+                  <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center text-xl shadow-md"
                     style={{ backgroundColor: `${skill.color}20` }}
                   >
                     {skill.icon}
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-white text-lg">{skill.name}</h4>
+                    <h4 className="font-semibold text-white text-lg">
+                      {skill.name}
+                    </h4>
                     <p className="text-sm text-gray-500">{skill.category}</p>
                   </div>
                 </div>
@@ -110,12 +119,12 @@ export default function Skill() {
                     <span>{skill.level}%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div 
+                    <div
                       className="h-2 rounded-full transition-all duration-1000 ease-out"
-                      style={{ 
+                      style={{
                         width: `${skill.level}%`,
                         backgroundColor: skill.color,
-                        boxShadow: `0 0 10px ${skill.color}40`
+                        boxShadow: `0 0 10px ${skill.color}40`,
                       }}
                     ></div>
                   </div>
@@ -123,7 +132,8 @@ export default function Skill() {
 
                 {/* Description */}
                 <p className="text-sm text-gray-600 mt-4 leading-relaxed">
-                  Building modern, responsive web applications with focus on performance and user experience.
+                  Building modern, responsive web applications with focus on
+                  performance and user experience.
                 </p>
               </div>
             ))}
@@ -146,6 +156,5 @@ export default function Skill() {
         }
       `}</style> */}
     </div>
-  )
+  );
 }
-

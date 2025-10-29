@@ -1,130 +1,124 @@
 'use client';
 import UnderLine from '../shared/UnderLine';
-import { TbDeviceImacCode } from 'react-icons/tb';
-import { PiCompassToolBold } from 'react-icons/pi';
-import { GiTakeMyMoney } from 'react-icons/gi';
-import { TbDeviceImacCog } from 'react-icons/tb';
+import { ProjectCard } from '../DRY_ui/info_card';
+import { Button } from '../ui/button';
+import { ArrowUpRight } from 'lucide-react';
 
-type WorkDimensionType = {
-  dimensionName: string;
-  icon: React.ReactNode;
-  description?: string;
-};
 
 export default function MyWorkDimension() {
-  const Dimensions: WorkDimensionType[] = [
+  const projects = [
     {
-      dimensionName: 'Web Development',
-      icon: <TbDeviceImacCode />,
-      description:
-        'Where logic meets creation, this is the field where I turn raw ideas into active digital systems.',
+      title: 'E-Commerce Platform',
+      focusedArea: ['Full-Stack'],
+      hook: 'A full-stack e-commerce solution with real-time inventory and AI-powered recommendations',
+      description: `Built a scalable e-commerce platform serving 10,000+ daily active users. The platform features real-time inventory management, personalized product recommendations, and seamless checkout experience.\n\nThe architecture leverages microservices for better scalability and uses Redis for caching to ensure sub-100ms response times even during peak traffic.`,
+      image:
+        'https://softwaresindemand.com/assets/images/how_it_works_images/6780c93b22a5e1736493371.png',
+      techStack: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Stripe'],
+      highlights: [
+        'Implemented real-time inventory sync across multiple warehouses',
+        'Reduced cart abandonment by 35% through optimized checkout flow',
+        'Achieved 99.9% uptime with automated scaling and monitoring',
+      ],
+      metrics: [
+        '40% faster page load times with optimized images and caching',
+        '35% reduction in cart abandonment rate',
+        '99.9% platform uptime over 12 months',
+        '500+ daily active merchants',
+      ],
+      links: {
+        caseStudy: '/projects/ecommerce-case-study',
+        liveDemo: 'https://demo-ecommerce.example.com',
+        github: 'https://github.com/username/ecommerce-platform',
+      },
     },
     {
-      dimensionName: 'Creative Tools',
-      icon: <PiCompassToolBold />,
-      description:
-        'A place where vision becomes real, where each tool serves as a way to express what words cannot.',
+      title: 'Health & Fitness App',
+      focusedArea: ['System Design', 'Frontend'],
+      hook: 'AI-powered fitness coaching platform with personalized workout plans',
+      description: `Developed a mobile-first fitness application that provides personalized workout routines and nutrition plans using machine learning algorithms.\n\nThe app includes progress tracking, social features, and integrates with wearable devices for real-time health monitoring and insights.`,
+      image:
+        'https://thewritelife.com/wp-content/uploads/2016/07/health-magazines.jpg',
+      techStack: [
+        'React Native',
+        'Python',
+        'MongoDB',
+        'TensorFlow',
+        'Firebase',
+      ],
+      highlights: [
+        'Built ML model for personalized workout recommendations with 92% accuracy',
+        'Implemented real-time sync with 10+ wearable device APIs',
+        'Designed intuitive UI that increased user retention by 45%',
+      ],
+      metrics: [
+        '92% accuracy in workout recommendations',
+        '45% increase in user retention',
+        '50,000+ active users in first 6 months',
+        '4.8/5 average app store rating',
+      ],
+      links: {
+        liveDemo: 'https://fitness-app.example.com',
+        github: 'https://github.com/username/fitness-app',
+      },
     },
     {
-      dimensionName: 'Finance & Operations',
-      icon: <GiTakeMyMoney />,
-      description:
-        'Where real work meets real numbers. learning the language of finance not from books, but from the front line of daily operations.',
-    },
-    {
-      dimensionName: 'Support & Systems',
-      icon: <TbDeviceImacCog />,
-      description:
-        'The silent backbone of progress, solving, sustaining, and strengthening everything that keeps motion alive.',
+      title: 'Health & Fitness App',
+      focusedArea: ['System Design', 'Frontend'],
+      hook: 'AI-powered fitness coaching platform with personalized workout plans',
+      description: `Developed a mobile-first fitness application that provides personalized workout routines and nutrition plans using machine learning algorithms.\n\nThe app includes progress tracking, social features, and integrates with wearable devices for real-time health monitoring and insights.`,
+      image:
+        'https://fitnessfastindia.com/wp-content/uploads/2025/06/Fitness-Fast-India-Bangalore-fitness.webp',
+      techStack: [
+        'React Native',
+        'Python',
+        'MongoDB',
+        'TensorFlow',
+        'Firebase',
+      ],
+      highlights: [
+        'Built ML model for personalized workout recommendations with 92% accuracy',
+        'Implemented real-time sync with 10+ wearable device APIs',
+        'Designed intuitive UI that increased user retention by 45%',
+      ],
+      metrics: [
+        '92% accuracy in workout recommendations',
+        '45% increase in user retention',
+        '50,000+ active users in first 6 months',
+        '4.8/5 average app store rating',
+      ],
+      links: {
+        liveDemo: 'https://fitness-app.example.com',
+        github: 'https://github.com/username/fitness-app',
+      },
     },
   ];
 
   return (
-    <div id="work-dimension">
-      <div>
+    <>
+      <div id="work-dimension">
         <h2>What Ive Do? / Work Dimension</h2>
         <UnderLine />
-        <p>
-          Every dimension of my work adds to a bigger system, where logic meets
-          creativity and ideas become real. I focus not only on what to build
-          but also on why it matters and how it endures. From structure to
-          innovation, everything I create connects with specific purposes.
+        <p className="text-center uppercase mb-12 text-xl text-muted-foreground max-w-3xl mx-auto">
+          Building at the intersection of code, design, and systems thinking,
+          from concept to deployment, with purpose at every stage.
         </p>
-        <div>
-          <div className="flex gap-8 justify-center items-stretch my-6">
-            {Dimensions.map((dimension, index) => (
-              <div key={index} className="w-full flex">
-                <style jsx>{`
-                  @keyframes rotate {
-                    0% {
-                      transform: rotate(0deg);
-                    }
-                    100% {
-                      transform: rotate(360deg);
-                    }
-                  }
 
-                  .rotating-border-card {
-                    position: relative;
-                    background: transparent;
-                    border-radius: 2rem;
-                    padding: 1.5rem;
-                    cursor: pointer;
-                    width: 100%,
-                    height: 100%,
-                    flex: 1;
-                    overflow: hidden;
-                  }
+        <div className="space-y-12 grid grid-cols-2 gap-x-[3%] gap-y-[1%]">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} className="mb-8" />
+          ))}
+        </div>
 
-                  .rotating-border-card::before {
-                    content: '';
-                    position: absolute;
-                    top: -50%;
-                    left: -50%;
-                    width: 200%;
-                    height: 200%;
-                    background: conic-gradient(
-                      from 0deg,
-                      rgba(255, 255, 255, 0.1) 0%,
-                      // var(--secondary) 25%,
-                      rgba(255, 255, 255, 0.1) 50%,
-                      var(--primary) 75% // rgba(255, 255, 255, 0.1) 100%
-                    );
-                    z-index: 0;
-                    animation: rotate 3s linear infinite;
-                  }
-
-                  .rotating-border-card::after {
-                    content: '';
-                    position: absolute;
-                    inset: 1px;
-                    background: rgba(38, 38, 38);
-                    border-radius: calc(2rem - 1px);
-                    z-index: 1;
-                  }
-
-                  .rotating-border-card > * {
-                    position: relative;
-                    z-index: 2;
-                  }
-                `}</style>
-                <div className="rotating-border-card flex flex-col gap-2 hover:scale-103 transition-transform duration-300">
-                  <div className="text-primary text-4xl bg-primary/20 w-fit rounded-full p-3">
-                    {dimension.icon}
-                  </div>
-                  <h2 className="text-xl text-left font-semibold">
-                    {dimension.dimensionName}
-                  </h2>
-                  <p className="m-0 text-base">{dimension.description}</p>
-                  <p className="text-sm text-right m-0 justify-self-end text-white/70 hover:text-white transition-colors mt-auto">
-                    Click To Know More...
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="justify-center text-center mt-8">
+          <Button asChild variant="outline" size="xl" className="gap-2">
+            <a href="/essays">
+              Explore Project Achive
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </Button>
         </div>
       </div>
-    </div>
+    </>
   );
 }

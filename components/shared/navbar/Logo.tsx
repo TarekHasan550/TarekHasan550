@@ -6,10 +6,7 @@ import { GiPerpendicularRings } from 'react-icons/gi';
 export default function Logo() {
   const router = useRouter();
   return (
-    <div
-      className="drop-shadow-[0_0_8px_var(--primary)] cursor-pointer"
-      onClick={() => router.push('/')}
-    >
+    <div className="cursor-pointer" onClick={() => router.push('/')}>
       <svg width="0" height="0" className="cursor-none">
         <defs>
           <linearGradient
@@ -25,11 +22,16 @@ export default function Logo() {
         </defs>
       </svg>
 
-      <GiPerpendicularRings
-        size={65}
-        className="[animation:spin_8s_linear_infinite] bg-clip-text bg-gradient-to-r from-primary to-secondary"
-        fill="url(#icon-gradient)"
-      />
+      <div className="flex items-center gap-x-4 cursor-pointer">
+        <GiPerpendicularRings
+          size={65}
+          className="[animation:spin_8s_linear_infinite] bg-clip-text bg-gradient-to-r from-primary to-secondary drop-shadow-[0_0_8px_var(--primary)]"
+          fill="url(#icon-gradient)"
+        />
+        <h1 className="text-4xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          Tarak Hasan
+        </h1>
+      </div>
     </div>
   );
 }
