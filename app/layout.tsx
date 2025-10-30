@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className='dark overflow-x-hidden'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased px-50 pt-10`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased px-10 lg:px-50 pt-10`}
       >
         {children}
       </body>

@@ -4,7 +4,6 @@ import { ProjectCard } from '../DRY_ui/info_card';
 import { Button } from '../ui/button';
 import { ArrowUpRight } from 'lucide-react';
 
-
 export default function MyWorkDimension() {
   const projects = [
     {
@@ -96,24 +95,37 @@ export default function MyWorkDimension() {
 
   return (
     <>
-      <div id="work-dimension">
-        <h2>What Ive Do? / Work Dimension</h2>
-        <UnderLine />
-        <p className="text-center uppercase mb-12 text-xl text-muted-foreground max-w-3xl mx-auto">
-          Building at the intersection of code, design, and systems thinking,
-          from concept to deployment, with purpose at every stage.
-        </p>
+      <div id="work-dimension" className="px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+            My Portfolio
+          </h2>
+          <UnderLine />
+          <p className="uppercase mb-8 md:mb-12 text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Building at the intersection of code, design, and systems thinking,
+            from concept to deployment, with purpose at every stage.
+          </p>
+        </div>
 
-        <div className="space-y-12 grid grid-cols-2 gap-x-[3%] gap-y-[1%]">
+        <div className="space-y-8 md:space-y-12 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-x-[3%] lg:gap-y-[1%]">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} className="mb-8" />
+            <ProjectCard
+              key={index}
+              project={project}
+              className="mb-6 md:mb-8"
+            />
           ))}
         </div>
 
-        <div className="justify-center text-center mt-8">
-          <Button asChild variant="outline" size="xl" className="gap-2">
+        <div className="flex justify-center text-center mt-6 md:mt-8">
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="gap-2 text-sm sm:text-base"
+          >
             <a href="/essays">
-              Explore Project Achive
+              Explore Project Archive
               <ArrowUpRight className="w-4 h-4" />
             </a>
           </Button>

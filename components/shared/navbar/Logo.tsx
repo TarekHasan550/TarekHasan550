@@ -22,13 +22,12 @@ export default function Logo() {
         </defs>
       </svg>
 
-      <div className="flex items-center gap-x-4 cursor-pointer">
+      <div className="flex items-center gap-x-2 sm:gap-x-3 md:gap-x-4 cursor-pointer">
         <GiPerpendicularRings
-          size={65}
-          className="[animation:spin_8s_linear_infinite] bg-clip-text bg-gradient-to-r from-primary to-secondary drop-shadow-[0_0_8px_var(--primary)]"
+          className="[animation:spin_8s_linear_infinite] bg-clip-text bg-gradient-to-r from-primary to-secondary drop-shadow-[0_0_8px_var(--primary)] size-15"
           fill="url(#icon-gradient)"
         />
-        <h1 className="text-4xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Tarak Hasan
         </h1>
       </div>

@@ -17,9 +17,14 @@ export function CollapsibleText({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="w-full">
       <div
-        className={isOpen ? 'leading-8 tracking-wide' : 'line-clamp-3'}
+        className={`
+          ${isOpen ? 'leading-8 tracking-wide' : 'line-clamp-3'}
+          text-base md:text-lg
+          break-words
+          hyphens-auto
+        `}
         style={
           isOpen
             ? {}
@@ -36,7 +41,7 @@ export function CollapsibleText({
 
       <Button
         variant="link"
-        className="p-0 h-auto text-primary mt-2"
+        className="p-0 h-auto text-primary mt-2 text-sm md:text-base"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? 'Show less' : triggerText}

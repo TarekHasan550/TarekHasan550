@@ -10,7 +10,7 @@ const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
-    initParticlesEngine(async (engine:Engine) => {
+    initParticlesEngine(async (engine: Engine) => {
       await loadSlim(engine);
     }).then(() => {
       setInit(true);
@@ -23,38 +23,80 @@ const ParticlesBackground = () => {
         options={{
           background: {
             color: {
-              value: 'transparent', // Black background
+              value: 'transparent',
             },
           },
           fpsLimit: 120,
           particles: {
             color: {
-              value: '#00f050', // White dots
+              value: '#00f050',
             },
             move: {
               enable: true,
-              speed: 0.6, // Slower movement
+              speed: 0.6,
               direction: 'none',
               random: true,
               straight: false,
               outModes: {
-                default: 'bounce', // Dots disappear when they go out of screen
+                default: 'bounce',
               },
             },
             number: {
-              value: 50, // Number of dots
+              value: 50,
+              density: {
+                enable: true,
+                width: window.innerWidth,
+                height: window.innerHeight,
+              },
             },
             opacity: {
-              value: 0.5 // Semi-transparent
+              value: 0.5,
             },
             shape: {
-              type: 'circle', // Simple dots
+              type: 'circle',
             },
             size: {
-              value: { min: 1, max: 3.5 }, // Random sizes between 1-3.5px
+              value: {
+                min: 1,
+                max:
+                  typeof window !== 'undefined' && window.innerWidth < 768
+                    ? 4
+                    : 3.5,
+              },
             },
           },
           detectRetina: true,
+          responsive: [
+            {
+              maxWidth: 768,
+              options: {
+                particles: {
+                  number: {
+                    value: 30, // Fewer particles on mobile for better performance
+                  },
+                  size: {
+                    value: {
+                      min: 1.5,
+                      max: 4, // Slightly larger dots on mobile for better visibility
+                    },
+                  },
+                  move: {
+                    speed: 0.4, // Slower movement on mobile
+                  },
+                },
+              },
+            },
+            {
+              maxWidth: 1024,
+              options: {
+                particles: {
+                  number: {
+                    value: 40, // Medium number for tablets
+                  },
+                },
+              },
+            },
+          ],
         }}
       />
     )

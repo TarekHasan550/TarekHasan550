@@ -16,7 +16,10 @@ function Card({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       data-slot="card"
-      className={cn('flex gap-8 justify-center items-stretch my-6', className)}
+      className={cn(
+        'flex flex-col md:flex-row gap-4 md:gap-8 justify-center items-stretch my-4 md:my-6',
+        className
+      )}
       {...props}
     />
   );
@@ -50,7 +53,7 @@ function RotatingBorderCard({
   return (
     <div className={cn('w-full flex', className)} {...props}>
       <motion.div
-        className="rotating-border-card flex flex-col gap-2"
+        className="rotating-border-card flex flex-col gap-2 p-4 md:p-6"
         style={dynamicStyles}
         whileHover={hoverScale ? { scale: 1.02 } : {}}
         transition={{ duration: 0.3 }}
@@ -77,13 +80,13 @@ function CardHeader({
   return (
     <div
       data-slot="card-header"
-      className={cn('flex flex-col gap-2 items-start', className)}
+      className={cn('flex flex-col gap-2 md:gap-3 items-start', className)}
       {...props}
     >
       {icon && (
         <div
           className={cn(
-            'text-primary text-3xl bg-primary/20 w-fit rounded-full p-3',
+            'text-primary text-2xl md:text-3xl bg-primary/20 w-fit rounded-full p-2 md:p-3',
             iconClassName
           )}
         >
@@ -99,7 +102,10 @@ function CardTitle({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       data-slot="card-title"
-      className={cn('leading-none font-semibold text-xl text-left', className)}
+      className={cn(
+        'leading-none font-semibold text-lg md:text-xl text-left',
+        className
+      )}
       {...props}
     />
   );
@@ -109,7 +115,10 @@ function CardDescription({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       data-slot="card-description"
-      className={cn('text-muted-foreground text-base m-0', className)}
+      className={cn(
+        'text-muted-foreground text-sm md:text-base m-0 leading-relaxed',
+        className
+      )}
       {...props}
     />
   );
@@ -154,12 +163,15 @@ function CardFooter({
   return (
     <div
       data-slot="card-footer"
-      className={cn('flex items-center [.border-t]:pt-6 mt-auto', className)}
+      className={cn(
+        'flex flex-col sm:flex-row items-start sm:items-center gap-2 [.border-t]:pt-4 md:[.border-t]:pt-6 mt-auto',
+        className
+      )}
       {...props}
     >
       {children}
       {showClickIndicator && (
-        <p className="text-sm text-right m-0 ml-auto text-white/70 hover:text-white transition-colors">
+        <p className="text-xs md:text-sm text-right m-0 ml-auto text-white/70 hover:text-white transition-colors">
           {indicatorText}
         </p>
       )}
