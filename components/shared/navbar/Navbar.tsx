@@ -1,14 +1,15 @@
 'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Tooltip } from 'react-tooltip';
-import { IoHome, IoPerson, IoClose, IoMenu } from 'react-icons/io5';
-import { HiWrenchScrewdriver } from 'react-icons/hi2';
-import { AnimatePresence, motion } from 'motion/react';
-import { FaLightbulb } from 'react-icons/fa';
-import Logo from './Logo';
 import { Button } from '@/components/ui/button';
+import { AnimatePresence, motion } from 'motion/react';
+import Link from 'next/link';
+import { useState } from 'react';
+import { FaLightbulb } from 'react-icons/fa';
+import { HiWrenchScrewdriver } from 'react-icons/hi2';
+import { IoClose, IoHome, IoMenu, IoPerson } from 'react-icons/io5';
 import { MdHandshake, MdOutlineHandshake } from 'react-icons/md';
+import { Tooltip } from 'react-tooltip';
+import Logo from './Logo';
+import { BsPersonWorkspace } from 'react-icons/bs';
 
 export default function Navbar() {
   const [actId, setActId] = useState<string | null>(null);
@@ -97,10 +98,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Desktop Connect Button */}
-      <Link href="#connect" className="z-51 hidden lg:block">
+      {/* Desktop View Work Button */}
+      <Link href="#work-dimension" className="z-51 hidden lg:block">
         <Button className="!py-3 !px-4 rounded-md text-sm lg:text-md cursor-pointer gap-2">
-          Lets Connect <MdOutlineHandshake className="w-4 h-4" />
+          <BsPersonWorkspace className="w-4 h-4 sm:w-5 sm:h-5" /> View My Work
         </Button>
       </Link>
 
