@@ -20,8 +20,8 @@ import { IoLogoReddit } from 'react-icons/io5';
 
 export function Contact() {
   return (
-    <section id="connect" className="py-12 sm:py-16 md:py-20 px-4 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-12 sm:py-16 md:py-20 px-4 bg-muted/30">
+      <div id="connect" className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4">

@@ -43,9 +43,9 @@ export default function AboutMe() {
 
   return (
     <div>
-      <div id="about-me" className="scroll-mt-20">
+      <div className="scroll-mt-10">
         {/* Header Section */}
-        <div className="text-center mb-8 md:mb-12 lg:mb-16">
+        <div id="about-me" className="text-center mb-8 md:mb-12 lg:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Who Am I? / About Me
           </h2>

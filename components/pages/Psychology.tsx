@@ -54,8 +54,8 @@ export default function Psychology() {
   ];
 
   return (
-    <section id="beyond-the-code" className="py-12 sm:py-16 md:py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-12 sm:py-16 md:py-20 px-4">
+      <div id="beyond-the-code" className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">

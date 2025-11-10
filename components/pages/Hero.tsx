@@ -10,7 +10,7 @@ export default function Hero() {
     <div id="#welcome" className="max-h-screen flex items-center">
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-around w-full gap-8 lg:gap-12 [&>*]:flex-1 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 sm:gap-6 w-full max-w-2xl">
-          <Badge className="p-2 text-xs sm:text-sm w-fit">👋 Wellcome</Badge>
+          <Badge className="p-2 text-xs sm:text-sm w-fit">👋 Welcome</Badge>
           <h1 className="m-0 text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text w-fit leading-[1.1] sm:leading-[1]">
             <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl block text-nowrap">
               Technologist. Thinker. Explorer.
@@ -20,12 +20,12 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-            I&apos;m not built to follow paths; I create my own and walk them with
-            reason, integrity, and quiet strength. <br />I believe truth has no
-            side, and Emotions only have value when guided by logic. I adapt
-            fast, but never compromise who I am. Those who meet me often find
-            clarity, not because I persuade them, but because I make them
-            question what truly matters. I work, think, and decide with purpose.
+            I always try to be that person who doesn&apos;t follow paths but builds
+            them with reason, integrity, and quiet strength. <br />
+            Truth has no side, and emotions matter only when guided by logic. <br />
+            I adapt fast but never at the cost of identity. Those around me often find
+            clarity not because I convince them, but because I make them
+            question what truly matters. Try, work, think, and decide with purpose.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 [&>*]:bg-[gradient-bg] [&>*]:cursor-pointer mb-2 w-full sm:w-auto">
             <Button
