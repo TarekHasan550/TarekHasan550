@@ -44,13 +44,13 @@ export function Contact() {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
-            {/* Academic Opportunities Card */}
+            {/* Startup Employees Card */}
             <Card className="group hover:shadow-lg transition-all duration-300 border hover:border-primary/30 flex flex-col h-full">
               <CardHeader className="pb-3 sm:pb-4">
                 <div className="flex items-center gap-2 sm:gap-3 mb-2">
-                  <span className="text-xl sm:text-2xl">🎓</span>
+                  <span className="text-xl sm:text-2xl">💼</span>
                   <CardTitle className="text-lg sm:text-xl">
-                    Academic Opportunities
+                    Startup Employees
                   </CardTitle>
                 </div>
                 <CardDescription className="text-foreground/80 text-sm sm:text-base leading-relaxed">
@@ -103,13 +103,13 @@ export function Contact() {
               </CardContent>
             </Card>
 
-            {/* Professional Collaboration Card */}
+            {/* Freelance Project's Card */}
             <Card className="group hover:shadow-lg transition-all duration-300 border hover:border-primary/30 flex flex-col h-full">
               <CardHeader className="pb-3 sm:pb-4">
                 <div className="flex items-center gap-2 sm:gap-3 mb-2">
-                  <span className="text-xl sm:text-2xl">💼</span>
+                  <span className="text-xl sm:text-2xl">👨🏻‍💻</span>
                   <CardTitle className="text-lg sm:text-xl">
-                    Professional Collaboration
+                    Freelance Project&apos;s 
                   </CardTitle>
                 </div>
                 <CardDescription className="text-foreground/80 text-sm sm:text-base leading-relaxed">

@@ -124,7 +124,7 @@ export default function MyWorkDimension() {
             size="lg"
             className="gap-2 text-sm sm:text-base"
           >
-            <a href="/essays">
+            <a href="/projects">
               Explore Project Archive
               <ArrowUpRight className="w-4 h-4" />
             </a>

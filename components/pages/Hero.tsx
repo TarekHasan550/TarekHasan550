@@ -10,15 +10,10 @@ export default function Hero() {
   return (
     <div id="#welcome" className="!max-h-screen flex items-center">
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-around w-full gap-8 lg:gap-12 [&>*]:flex-1 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-4 sm:gap-6 w-full max-w-2xl">
+        <div className="flex flex-col gap-4 w-full max-w-2xl">
           <Badge className="p-2 text-xs sm:text-sm w-fit">👋 Welcome</Badge>
           <h1 className="m-0 text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text w-fit leading-[1.1] sm:leading-[1]">
-            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl block text-nowrap">
-              A Thinker. Explorer. Coder.
-            </span>
-            <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl block mt-2 sm:mt-3">
-              Building bridges between code and possibility.
-            </span>
+              I&apos;m Tarak Hasan
           </h1>
           <p className="text-sm sm:text-base md:text-lg leading-relaxed">
             No bullshit, see my works and see if I am your guy. Reach out to me

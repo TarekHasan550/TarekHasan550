@@ -13,7 +13,7 @@ export default function Home() {
     <div>
       <Navbar />
       <ParticlesBackground />
-      <div className="mt-20 space-y-80">
+      <div className="mt-20 space-y-40 md:space-y-80">
         <Glow top={-9} left={90} size={15} opacity={30} />
         <Glow />
         <Glow top={39} left={70} opacity={35} size={10} />

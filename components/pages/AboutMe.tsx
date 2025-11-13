@@ -4,7 +4,6 @@ import { GiMagnifyingGlass } from 'react-icons/gi';
 import { IoCompassSharp } from 'react-icons/io5';
 import { PiLinkDuotone } from 'react-icons/pi';
 import { RiSeedlingFill } from 'react-icons/ri';
-import { CollapsibleText } from '../animations/TextWraper';
 import {
   CardDescription,
   CardHeader,
@@ -17,27 +16,26 @@ export default function AboutMe() {
   const MyPrinciples = [
     {
       icon: <GiMagnifyingGlass />,
-      title: 'Question First, Code Second',
+      title: 'Understand the problem first',
       description:
-        'Every technical decision starts with "Why?" Understanding the problem deeply prevents solving the wrong thing elegantly. Curiosity shapes better solutions than assumptions ever will.',
+        'Clarify requirements before coding. Saves time, prevents wrong solutions.',
     },
     {
       icon: <BsPersonHeart />,
-      title: 'Build for Humans, Not Résumés',
-      description:
-        "Technology exists to serve people. If a solution is technically impressive but fails the actual user, it's not a solution, it's a showcase. I prioritize usability and real impact over clever complexity.",
+      title: 'Build for actual users',
+      description: 'Clear, usable code beats clever complexity.',
     },
     {
       icon: <RiSeedlingFill />,
-      title: 'Learn in Public',
+      title: 'Document what I learn',
       description:
-        "Growth happens at the edges of comfort. I document failures as much as successes because that's where real learning lives. Sharing the journey builds better work and stronger connections.",
+        'Write about failures and wins. Faster learning, better community.',
     },
     {
       icon: <PiLinkDuotone />,
-      title: 'Connect the Dots',
+      title: 'Look for connections',
       description:
-        'The best solutions often emerge from unexpected intersections. Design informs code. Psychology shapes interfaces. Systems thinking reveals patterns. I look for connections others might miss.',
+        'Combine design, logic, and user behavior for stronger solutions',
     },
   ];
 
@@ -45,7 +43,7 @@ export default function AboutMe() {
     <div>
       <div className="scroll-mt-10">
         {/* Header Section */}
-        <div id="about-me" className="text-center mb-8 md:mb-12 lg:mb-16">
+        <div id="about-me" className="text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Who Am I? / About Me
           </h2>
@@ -60,7 +58,7 @@ export default function AboutMe() {
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-20 w-full py-6 md:py-8 lg:py-10 items-center">
           {/* Profile Image */}
           <div className="w-full lg:w-[45%] flex justify-center lg:justify-start order-2 lg:order-1">
-            <div className="relative rounded-3xl md:rounded-4xl overflow-hidden w-full max-w-sm md:max-w-none lg:w-full h-[50vw] sm:h-[45vw] md:h-[40vw] lg:h-[35vw]">
+            <div className="relative rounded-3xl hidden md:block md:rounded-4xl overflow-hidden w-full max-w-sm md:max-w-2xl lg:w-full h-[50vw] md:h-[80vw] lg:h-[35vw]">
               <Image
                 src="/green_hue.webp"
                 fill
@@ -75,25 +73,16 @@ export default function AboutMe() {
           <div className="w-full lg:w-[75%] order-1 lg:order-2">
             {/* Core Philosophy */}
             <div className="space-y-4 md:space-y-6">
-              <p className="text-lg sm:text-xl md:text-xl font-bold text-primary tracking-wide uppercase text-center lg:text-left">
-                I BUILD AT THE INTERSECTION OF LOGIC AND CURIOSITY.
+              <p className="text-sm sm:text-base md:text-lg">
+                Thinker-coder at logic, curiosity crossroads. Question problems deeply as MERN dev. blend with design for human-centric tech. Explore mechatronics. Purposeful build, always curious.
               </p>
-
-              <div className="text-sm sm:text-base md:text-lg">
-                <CollapsibleText
-                  text="Most developers see problems as puzzles to solve. I see them as questions to ask. Before writing a single line of code, I ask: Why does this problem exist? Who does it effect? What assumptions are we making? This systems-thinking approach shapes everything I create from architecture decisions to user interface choices. As a MERN stack eveloper, I've learned that technical excellence isn't just about writing clean code. It's about understanding the human context around that code. That's why I combine evelopment skills with design thinking and a genuine curiosity about how people interact with technology. The best solutions don't just work they make sense to the people sing them. 
-                  I'm currently exploring the boundaries between software engineering and mechatronics, fascinated by how digital and physical systems can work together. This isn't bout mastering everything—it's about understanding connections that others might miss. My goal is to deepen this perspective through advanced study in Europe, where I can engage with research communities exploring human-computer interaction and systems engineering. 
-                  My approach is simple: Build with purpose. Question assumptions. Stay curious. And always remember that technology serves people, not the other way around."
-                  maxLines={2}
-                />
-              </div>
             </div>
 
             {/* Divider */}
             <div className="border-t border-primary/10 my-6 md:my-8"></div>
 
             {/* Principles Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 px-2 sm:px-4 md:px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 px-2 sm:px-4 md:px-6">
               {MyPrinciples.map((principle, index) => (
                 <RotatingBorderCard key={index}>
                   <CardHeader icon={principle.icon}>
@@ -101,7 +90,7 @@ export default function AboutMe() {
                       {principle.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardDescription className="text-sm sm:text-base">
+                  <CardDescription className="text-base sm:text-md">
                     {principle.description}
                   </CardDescription>
                 </RotatingBorderCard>

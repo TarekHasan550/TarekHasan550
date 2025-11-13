@@ -18,16 +18,16 @@ export default function Navbar() {
   const navItems = [
     { label: 'Welcome', icon: <IoHome />, id: 'welcome', toolTip: 'Welcome' },
     {
-      label: 'Approach',
-      icon: <IoPerson />,
-      id: 'about-me',
-      toolTip: 'About Me',
-    },
-    {
       label: 'Portfolio',
       icon: <HiWrenchScrewdriver />,
       id: 'work-dimension',
       toolTip: 'My Work Dimension',
+    },
+    {
+      label: 'Approach',
+      icon: <IoPerson />,
+      id: 'about-me',
+      toolTip: 'About Me',
     },
     {
       label: 'Thinking',
@@ -137,7 +137,7 @@ export default function Navbar() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -20 }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
-              className="fixed top-20 right-4 left-4 z-50 bg-background/90 backdrop-blur-md border border-primary/20 rounded-lg shadow-lg lg:hidden"
+              className="fixed top-40 right-4 left-4 z-50 bg-background/90 backdrop-blur-md border border-primary/20 rounded-lg shadow-lg lg:hidden"
             >
               <div className="p-4 space-y-3">
                 {navItems.map((item, i) => (

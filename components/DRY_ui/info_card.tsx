@@ -92,8 +92,8 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             </p>
           )}
         </div>
-
-        {/* Tech Stack Tags */}
+{/* 
+        // Tech Stack Tags 
         <div>
           <h4 className="font-semibold text-base sm:text-lg -mb-1">
             Tech Stacks:
@@ -111,7 +111,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           </div>
         </div>
 
-        {/* 3 Key Highlights */}
+        // 3 Key Highlights 
         <div className="space-y-2 sm:space-y-3">
           <h4 className="font-semibold text-base sm:text-lg">Key Highlights</h4>
           <ul className="space-y-1 sm:space-y-2">
@@ -124,9 +124,9 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
               </li>
             ))}
           </ul>
-        </div>
+        </div> 
 
-        {/* Metrics */}
+        // Metrics
         {project.metrics && project.metrics.length > 0 && (
           <div className="bg-muted/50 rounded-lg p-3 sm:p-4">
             <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">
@@ -144,6 +144,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             </div>
           </div>
         )}
+        */}
       </CardContent>
 
       <CardFooter className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-between items-start sm:items-center pt-4 sm:pt-6 border-t px-4 sm:px-6">

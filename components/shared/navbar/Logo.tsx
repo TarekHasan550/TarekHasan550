@@ -27,9 +27,9 @@ export default function Logo() {
           className="[animation:spin_8s_linear_infinite] bg-clip-text bg-gradient-to-r from-primary to-secondary drop-shadow-[0_0_8px_var(--primary)] size-15"
           fill="url(#icon-gradient)"
         />
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <h6 className="text-2xl sm:text-3xl md:text-4xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Tarak Hasan
-        </h1>
+        </h6>
       </div>
     </div>
   );
