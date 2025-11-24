@@ -156,7 +156,7 @@ export function Footer() {
           </Card>
         </div>
         {/* Bottom Divider */}
-        <div className="border-t border-border my-6 -mx-30"></div>
+        <div className="border-t border-border my-6 -mx-8 lg:-mx-30"></div>
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">

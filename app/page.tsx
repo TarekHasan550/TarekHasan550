@@ -7,10 +7,12 @@ import { Contact } from '@/components/pages/Contact';
 import { Footer } from '@/components/shared/Footer';
 import Glow from '@/components/shared/Glow';
 import Navbar from '../components/shared/navbar/Navbar';
+import {ReactLenis} from 'lenis/react'
 
 export default function Home() {
   return (
     <div>
+      <ReactLenis root options={{lerp: 0.03, wheelMultiplier: 1.4}}/>
       <Navbar />
       <ParticlesBackground />
       <div className="mt-20 space-y-40 md:space-y-80">
